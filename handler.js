@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url'
 import path, { join } from 'path'
 import { unwatchFile, watchFile, readFileSync } from 'fs'
 import chalk from 'chalk'
-import knights from 'knights-canvas'
+//import knights from 'knights-canvas'
 import fetch from 'node-fetch'
 
 /**
@@ -449,6 +449,7 @@ export async function participantsUpdate({ id, participants, action }) {
     let chat = global.db.data.chats[id] || {}
     let text = ''
     switch (action) {
+/*
         case 'add':
         case 'remove':
             if (chat.welcome) {
@@ -493,10 +494,12 @@ sourceUrl: global.social
       [action == 'add' ? 'ᴡᴇʟᴄᴏᴍᴇ' : 'sᴀʏᴏɴᴀʀᴀᴀ', action === 'add' ? '.intro' : 'bilek']], null, fkontak, { mentions: [user] })*/
                         
 		// this.sendFile(id, action === 'add' ? wel.toBuffer() : lea.toBuffer(), 'pp.jpg', text, null, false, { contextInfo: { mentionedJid: [user] }})
+/*
                     }
                 }
             }
             break
+*/
         case 'promote':
             text = (chat.sPromote || this.spromote || conn.spromote || '@user ```is now Admin```')
         case 'demote':
