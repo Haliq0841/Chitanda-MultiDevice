@@ -41,7 +41,7 @@ let animeingfo = `📺 ᴛɪᴛʟᴇ: ${judul}
 `
 conn.sendFile(m.chat, json.data[0].images.jpg.image_url, 'animek.jpg', `*${htki} ANIME INFO ${htka}*\n` + animeingfo, m)
 
-  conn.reply(m.chat, 'JANGAN LUPA SUPPORT DEVELOPERNYA\nXnuvers007\nhttps://saweria.co/xnuvers007', m)
+  //conn.reply(m.chat, 'JANGAN LUPA SUPPORT DEVELOPERNYA\nXnuvers007\nhttps://saweria.co/xnuvers007', m)
 }
 handler.help = ['animeinfo <anime>', 'anime <anime>', 'infoanime <anime>', 'nimeinfo <anime>', 'nime <anime>']
 handler.tags = ['anime']

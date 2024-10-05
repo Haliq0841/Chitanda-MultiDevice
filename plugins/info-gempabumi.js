@@ -29,7 +29,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     txt += `Google Maps : https://google.com/maps/place/${anu.Coordinates}`;
 
     if (anu.Dirasakan) {
-      txt += `\nDirasakan   : ${anu.Dirasakan}\n\nSupport me on https://trakteer.id/Xnuvers007\nYou can Scan me on DANA https://bioskop-six.vercel.app/images`;
+      txt += `\nDirasakan   : ${anu.Dirasakan}\n`;
     }
       txt += `\n\n===============================\nINFORMASI GEMPA SEBELUMNYA:\n\n`;
     for (let i = 0; i < anu2.length; i++) {
@@ -43,7 +43,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
       txt += `Kedalaman   : ${anu2[i].Kedalaman}\n`;
       txt += `Wilayah     : ${anu2[i].Wilayah}\n`;
       txt += `Potensi     : ${anu2[i].Potensi}\n`;
-      txt += `\nSupport Developer on https://trakteer.id/Xnuvers007\nYou can Scan me on DANA https://bioskop-six.vercel.app/images\n\n`;
+      //txt += `\nSupport Developer on https://trakteer.id/Xnuvers007\nYou can Scan me on DANA https://bioskop-six.vercel.app/images\n\n`;
     }
 
     let imgBuffer = await (await fetch(link + anu.Shakemap)).buffer();

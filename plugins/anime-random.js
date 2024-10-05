@@ -36,10 +36,10 @@ let res = await (await fetch(`https://raw.githubusercontent.com/KazukoGans/datab
 let cita = res[Math.floor(Math.random() * res.length)]
 conn.sendFile(m.chat, cita, 'result.jpg', `Nihh ${command} nya @${m.sender.split('@')[0]}`, m) 
 }
-if (command == 'chitanda') {
+if (command == 'chitanda') {    
 let res = await (await fetch(`https://raw.githubusercontent.com/KazukoGans/database/main/anime/chitanda.json`)).json()
 let cita = res[Math.floor(Math.random() * res.length)]
-conn.sendFile(m.chat, cita, 'result.jpg', `Nihh ${command} nya @${m.sender.split('@')[0]}`, m) 
+conn.sendFile(m.chat, cita, 'result.jpg', `Hai kak @${m.sender.split('@')[0]}`, m) 
 }
 if (command == 'chitoge') {
 let res = await (await fetch(`https://raw.githubusercontent.com/KazukoGans/database/main/anime/chitoge.json`)).json()

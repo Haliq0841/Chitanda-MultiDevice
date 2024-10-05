@@ -26,7 +26,6 @@ ${
 ${usedPrefix + command} medlineplus.gov/musclecramps.html
 |====================================|\n
 NOTE: Pokoknya masih banyak lagi, kalo error, hubungi +${global.nomorown}
-coded by https://github.com/Xnuvers007 [Xnuvers007]
 `);
   }
 

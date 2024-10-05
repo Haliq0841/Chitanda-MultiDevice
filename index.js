@@ -41,7 +41,7 @@ function start(file) {
       case 'reset':
         p.kill(); // Change here
         isRunning = false;
-        start(file);
+        //start(file);
         break;
       case 'uptime':
         p.send(process.uptime());

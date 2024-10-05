@@ -2,6 +2,7 @@ let handler = async (m, { conn, args }) => {
   try {
       if (!args[0]) throw 'Input Jid People/Groups'
       const jid = args[0]
+      if (!args[0]) jid = m.chat
       await conn.chatModify({
         delete: true,
         lastMessages: [{

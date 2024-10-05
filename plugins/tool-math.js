@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 var handler = async (m, { args, conn, usedPrefix, command }) => {
     if (!args[0]) {
-        throw `Masukkan ekspresi matematika\nContoh: ${usedPrefix + command} berapa 1+1 atau soal matematika lainnya.\n\n_*Note: Dikoding dengan menggunakan kecerdasan buatan AI mathematics by Xnuvers007/Indra.*_`;
+        throw `Masukkan ekspresi matematika\nContoh: ${usedPrefix + command} berapa 1+1 atau soal matematika lainnya.\n`;
     }
 
     try {

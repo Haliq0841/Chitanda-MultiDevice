@@ -72,7 +72,7 @@ async function ssweb(url, device = 'desktop') {
                     resolve(result);
                 });
             } else {
-                reject({ status: 404, author: 'Xnuvers007', message: data.data });
+                reject({ status: 404, author: '', message: data.data });
             }
         }).catch(reject);
     });

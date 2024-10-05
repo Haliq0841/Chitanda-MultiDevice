@@ -33,7 +33,8 @@ let handler = async (m, _2) => {
     if (err) _syntax = '```' + err + '```\n\n'
     _return = e
   } finally {
-    conn.reply(m.chat, _syntax + format(_return), m)
+    let trainingoi = _syntax + format(_return)
+    if (trainingoi !== 'undefined') conn.reply(m.chat, trainingoi, m)
     m.exp = old
   }
 }

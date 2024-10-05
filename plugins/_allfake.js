@@ -6,12 +6,22 @@ import fetch from 'node-fetch'
 import axios from 'axios'
 import moment from 'moment-timezone'
 
+try {
+    console.log('Importing modules...');
+    global.fs = await import('fs');
+    global.fetch = (await import('node-fetch')).default;
+    global.bochil = await import('@bochilteam/scraper');
+    console.log('Modules imported successfully');
+} catch (e) {
+    console.error(`Error importing modules: ${e}`);
+global.bochil = {};
+}
 function pickRandom(list) {
     return list[Math.floor(list.length * Math.random())];
 }
 
 function ucapan() {
-    const time = moment.tz('Asia/Jakarta').format('HH');
+    const time = moment.tz('Asia/Makassar').format('HH');
     if (time >= 18) return "Selamat malam🌃";
     if (time >= 15) return "Selamat sore🌇";
     if (time >= 10) return "Selamat siang🌅";
@@ -45,14 +55,16 @@ let handler = m => m;
 
 handler.all = async function (m) {
     const name = await conn.getName(m.sender) 
-	let pp;
+	let pp = 'https://artikel.rumah123.com/wp-content/uploads/sites/41/2023/09/12160753/gambar-foto-profil-whatsapp-kosong.jpg'
+    /*
 	try {
 		pp = await this.profilePictureUrl(m.sender, 'image')
 	} catch (e) {
 	    pp = 'https://artikel.rumah123.com/wp-content/uploads/sites/41/2023/09/12160753/gambar-foto-profil-whatsapp-kosong.jpg'
 	}
-		
+    */
 		// Module 
+    /*
     try {
         console.log('Importing modules...');
         global.fs = await import('fs');
@@ -63,12 +75,13 @@ handler.all = async function (m) {
         console.error(`Error importing modules: ${e}`);
 	global.bochil = {};
     }
-    
+    */
 		global.ucapan = ucapan()
 		global.ephemeral = '86400' // 86400 = 24jam, kalo ingin di hilangkan ganti '86400' jadi 'null' atau ''
          
  try {
     global.adReply = {
+        /*
         contextInfo: {
             forwardingScore: 9999,
             externalAdReply: {
@@ -82,6 +95,7 @@ handler.all = async function (m) {
                 sourceUrl: "https://github.com/ImYanXiao"
             }
         }
+            */
     };
 } catch (e) {
     console.error(`Error setting adReply: ${e}`);
