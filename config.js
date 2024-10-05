@@ -51,34 +51,34 @@ import moment from 'moment-timezone'
 /*============== SOCIAL ==============*/
 
 // kalo ga punya biarin aja biar ada creditsnya :v
-global.sig = 'https://instagram.com/Xiao_yan_21' //Link Instagrammu
-global.sgh = 'https://github.com/ImYanXiao' //Link Githubmu
-global.sgc = 'https://chat.whatsapp.com/DyBMXDw1IshFM9z0ZHZNlR'
+global.sig = '' //Link Instagrammu
+global.sgh = '' //Link Githubmu
+global.sgc = ''
 global.sdc = '-' //Isi Pake Link Discordmu Kalo Gada Biarin aja
 global.snh = 'https://nhentai.net/' //Hmmm, Ini boleh kalian isi terserah :v
 
 /*============== PAYMENT ==============*/
-global.pdana = '-' //Nomor Danamu
-global.ppulsa = '-' //Nomor SimCard Yang Kamu Pake
-global.psaweria = 'https://saweria.com/XiaoYan021' //Link Saweriamu Kalo Nggada Ketik - aja
+global.pdana = '085849227863' //Nomor Danamu
+global.ppulsa = '085849227863' //Nomor SimCard Yang Kamu Pake
+global.psaweria = '' //Link Saweriamu Kalo Nggada Ketik - aja
 
 /*============== NOMOR ==============*/
-global.nomorbot = '-' //Nomor Bot
-global.nomorown = '-' //Nomor Owner
-global.namebot = 'Elaina BOT' //Nama Bot
-global.nameown = '-' // Nama Owner
+global.nomorbot = '6285751538940' //Nomor Bot
+global.nomorown = '6285849227863' //Nomor Owner
+global.namebot = 'Chitanda BOT' //Nama Bot
+global.nameown = 'Abdul Haliq' // Nama Owner
 
 
 /*============== STAFF ==============*/
 global.owner = [
-  ['-', 'Developer Owner', true] //Ganti jd nomormu sama Namamu
+  ['6285849227863', 'Developer Owner', true] //Ganti jd nomormu sama Namamu
   // [number, dia creator/owner?, dia developer?] ex= [62123456789, "siapa kek", false]
 ] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user bukan disini nambahinnya, ketik .addprem @user 10
 
 
-global.lolkey = 'apikeymu'
+global.lolkey = 'd75032e282829574064660b3'
 global.googlegemini = 'silahkan diisi token masing masing' // https://aistudio.google.com/app/apikey
 /*============== API ==============*/
 // Tambahin Rest Apinya Sendiri Krn yg saya hapus apinya sudah Mati
@@ -89,15 +89,15 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
-  'https://api.lolhuman.xyz': 'Apikeymu'
+  'https://api.lolhuman.xyz': 'd75032e282829574064660b3'
 }
 // Kata APIKEY itu isi dengan apikeymu, dengan beli ke website itu
 
 /*============== WATERMARK ==============*/
-global.wm = '                「 Elaina 𝙱𝙾𝚃 汉  」' //Main Watermark
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Elaina - Chan˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ Elaina 𝙱𝙾𝚃'
-global.namedoc = 'Elaina`s Bot' //Main Name Menu Document
+global.wm = '                「 Chitanda 𝙱𝙾𝚃 汉  」' //Main Watermark
+global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Chitanda˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
+global.wm3 = '⫹⫺ Chitanda 𝙱𝙾𝚃'
+global.namedoc = 'Chitanda Bot' //Main Name Menu Document
 global.botdate = `⫹⫺ Day's: ${week} ${date}\nWeton: ${weton}`
 global.bottime = `⫹⫺TIME: \nWIB: ${wktuwib}\nWITA: ${wktuwita}\nWIT: ${wktuwit}`
 global.titlebot = '🎋 ┊ Simple WhatsApp Bot'

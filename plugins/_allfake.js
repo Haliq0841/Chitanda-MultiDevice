@@ -68,8 +68,8 @@ handler.all = async function (m) {
     try {
         console.log('Importing modules...');
         global.fs = await import('fs');
-        global.fetch = (await import('node-fetch')).default;
-        global.bochil = await import('@bochilteam/scraper');
+        //global.fetch = (await import('node-fetch')).default;
+        global.bochil = {};//await import('@bochilteam/scraper');
         console.log('Modules imported successfully');
     } catch (e) {
         console.error(`Error importing modules: ${e}`);
