@@ -3,7 +3,7 @@ import ffmpeg from "fluent-ffmpeg";
 import fs from "fs/promises";
 import { fileTypeFromStream } from 'file-type';
 import { tiktokdl } from "@bochilteam/scraper";
-import cheerio from 'cheerio';
+//import cheerio from 'cheerio';
 import tobytt from "@tobyg74/tiktok-api-dl";
 const TiktokDownloader = tobytt.Downloader;
 
