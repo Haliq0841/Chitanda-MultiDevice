@@ -262,7 +262,7 @@ conn.reply(m.chat, 'Sedang membuat gambar...', m);
   *Description:* ${deskripsi}
   *Usage:* ${pemakai}
 
-  _Capcut Downloader By Xnuvers007_
+  _Capcut Downloader
   `;
 
       conn.sendFile(m.chat, videourl, judul + '.mp4', capcut, m);

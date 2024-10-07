@@ -1,6 +1,7 @@
 // update By Xnuvers007
 
 import fetch from 'node-fetch'
+import translate from '@iamtraction/google-translate'
 
 var handler = async (m, { conn, text }) => {
 if (!text) throw `*_Masukan Judul Anime Yang Ingin Kamu Cari !_*`
@@ -16,6 +17,8 @@ let studio = json.data[0].studios.map(stud => `${stud.name} (${stud.url})`).join
 let genre = json.data[0].genres.map(xnuvers007 => `${xnuvers007.name}`).join('\n');
 let judul = json.data[0].titles.map(jud => `${jud.title} [${jud.type}]`).join('\n');
 let trailerUrl = json.data[0].trailer.url;
+let translateSynop = await translate(synopsis, { to: 'id' }).catch(_ => null)
+if (translateSynop) synopsis = translateSynop.text
 
 let animeingfo = `📺 ᴛɪᴛʟᴇ: ${judul}
 📺 Trailer: ${trailerUrl}

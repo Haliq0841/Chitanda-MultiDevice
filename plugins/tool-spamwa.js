@@ -29,5 +29,6 @@ handler.group = false
 handler.premium = false
 handler.private = true
 handler.limit = 10
+handler.disable = true
 
 export default handler

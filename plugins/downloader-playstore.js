@@ -9,7 +9,7 @@ var handler = async (m, { conn, args, text, usedPrefix, command }) => {
   wordwrap: 130,
   // ...
 };
-    const tok = "oauth2_4/0AeaYSHACjDz3P06f-hm8x3_05DfRxRloHv9XKiw1MsATT83c4B6FrBwwcO87zDPxZBO-iQ";
+    const tok = "oauth2_4/0AVG7fiQBZzjLZCktNgCnvnE1cRsvQgS4oEjKt-4ZsWr9l1EEgyowF6V5DOTXAnGYrq92TQ";
     const savetok = join(__dirname, "temp/token.txt");
     if (!text) return conn.reply(m.chat, `Silahkan masukan nama aplikasi atau link google play store!`, m);
     let playid = text;

@@ -14,5 +14,6 @@ var handler = async(m, { conn, text, usedPrefix, command }) => {
 handler.help = ['sc', 'script']
 handler.tags = ['info', 'main']
 handler.command =  /^(script|sc)$/i
+handler.disable = true
 
 export default handler

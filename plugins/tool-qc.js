@@ -7,7 +7,8 @@ ini wm gw cok jan di hapus
 
 import { sticker } from '../lib/sticker.js';
 import axios from 'axios';
-import uploadImage from '../lib/uploadImage.js';
+//import { u} from '../lib/uploadImage.js';
+import { uploader as uploadImage } from 'server-uploader'
 import { webp2png } from '../lib/webp2mp4.js';
 
 let handler = async (m, { conn, text, usedPrefix , command }) => {

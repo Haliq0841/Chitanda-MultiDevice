@@ -7,7 +7,7 @@ import { xpRange } from '../lib/levelling.js'
 import moment from 'moment-timezone'
 import os from 'os'
 import fs from 'fs'
-import fetch from 'node-fetch'
+//const moment = () => {}
 const { generateWAMessageFromContent, proto } = (await import('@adiwajshing/baileys')).default
 
 const defaultMenu = {
@@ -178,7 +178,7 @@ let tags = {
     let premium = global.db.data.users[m.sender].premiumTime
     let prems = `${premium > 0 ? 'Premium': 'Free'}`
     let platform = os.platform()
-    let ultah = clockStringP(hitunganMundur(30, 11, 31, 5, 2024, -8))
+    let ultah = clockStringP(hitunganMundur(30, 11, 31, 5, 2025, -8))
     
     //---------------------
     
@@ -248,7 +248,7 @@ for (let plugin of help)
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    
+  /*  
     //----------------- FAKE
  let fvn = {quoted: { key: {participant : '0@s.whatsapp.net'},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds": "2022","ptt": "true"} } }}
  let floc = {quoted: { key: { participant : '0@s.whatsapp.net'}, message: { "liveLocationMessage": { "caption": `Menu`,"h": `${name}`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}} }}
@@ -305,7 +305,7 @@ for (let plugin of help)
     }
     }
     }
-    
+    /*
     const fload = {
     key : {
     remoteJid: 'status@broadcast',
@@ -323,6 +323,7 @@ for (let plugin of help)
     }
     }
     }
+    */
     await conn.reply(m.chat, '*Tunggu Sebentar Kak. . .*', ftrol) 
     
     //------------------< MENU >----------------
@@ -351,7 +352,8 @@ for (let plugin of help)
     
    //~~~Source : https://github.com/Rlxfly
     //------- MENU LOCATION
-    /*const pre = generateWAMessageFromContent(m.chat, { liveLocationMessage:{
+    /*
+    const pre = generateWAMessageFromContent(m.chat, { liveLocationMessage:{
   degreesLatitude: 34.672314,
   degreesLongitude: 135.484802,
   accuracyInMeters: 100,
@@ -365,9 +367,11 @@ for (let plugin of help)
 }}, { quoted: m
 					})
 
-return conn.relayMessage(m.chat, pre.message, { messageId: pre.key.id })*/
+return conn.relayMessage(m.chat, pre.message, { messageId: pre.key.id })
+*/
 
 //-------DOC TEMPLATE
+/*
     const message = { 
             document: { url: thumbdoc },
             jpegThumbnail: await (await fetch(urls)).buffer(),
@@ -445,8 +449,9 @@ return conn.relayMessage(m.chat, pre.message, { messageId: pre.key.id })*/
     // Mampus Di Enc 🧢
     // Gausah Dihapus, Thx
     //------------------ DOCUMENT WITH EXTERNALADS WITHOUT BUTTON
-    function _0x2daf(){const _0x4c1076=['namedoc','social','1017dFLzIP','11680bWFOeX','sendMessage','1FnTozH','6qNtNxK','445374chjKag','2096504ySppGm','627669MaFyqj','readFileSync','ʜᴏᴡ\x20ᴀʀᴇ\x20ʏᴏᴜ\x20ᴛᴏᴅᴀʏ?','374160lMCurS','356228pujvOS','./thumbnail.jpg','1019845zOpQQK','pdf','chat'];_0x2daf=function(){return _0x4c1076;};return _0x2daf();}const _0x110137=_0x13bb;(function(_0x14d3d7,_0x67b65e){const _0x3a56bf={_0x2e964c:0x1b0,_0x4fc539:0x1bd,_0x2a1845:0x1b1,_0x2b6724:0x1b3,_0x4293cc:0x1b8,_0x59080a:0x1b9},_0x30692c=_0x13bb,_0x119b1c=_0x14d3d7();while(!![]){try{const _0x181128=parseInt(_0x30692c(0x1bb))/0x1*(parseInt(_0x30692c(_0x3a56bf._0x2e964c))/0x2)+parseInt(_0x30692c(_0x3a56bf._0x4fc539))/0x3+parseInt(_0x30692c(_0x3a56bf._0x2a1845))/0x4+parseInt(_0x30692c(_0x3a56bf._0x2b6724))/0x5*(parseInt(_0x30692c(0x1bc))/0x6)+-parseInt(_0x30692c(0x1ad))/0x7+-parseInt(_0x30692c(0x1be))/0x8+parseInt(_0x30692c(_0x3a56bf._0x4293cc))/0x9*(-parseInt(_0x30692c(_0x3a56bf._0x59080a))/0xa);if(_0x181128===_0x67b65e)break;else _0x119b1c['push'](_0x119b1c['shift']());}catch(_0x1caf7d){_0x119b1c['push'](_0x119b1c['shift']());}}}(_0x2daf,0x235d2));function _0x13bb(_0x16c7de,_0x1a27b8){const _0x2dafbc=_0x2daf();return _0x13bb=function(_0x13bbaf,_0x156d41){_0x13bbaf=_0x13bbaf-0x1ad;let _0x1a2b8a=_0x2dafbc[_0x13bbaf];return _0x1a2b8a;},_0x13bb(_0x16c7de,_0x1a27b8);}let buttonMessage={'document':{'url':sgh},'mimetype':td,'fileName':global[_0x110137(0x1b6)],'fileLength':fsizedoc,'pageCount':fpagedoc,'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaType':0x1,'previewType':_0x110137(0x1b4),'title':_0x110137(0x1af),'thumbnail':fs[_0x110137(0x1ae)](_0x110137(0x1b2)),'renderLargerThumbnail':!![],'sourceUrl':global[_0x110137(0x1b7)]}},'caption':text['trim']()};await conn[_0x110137(0x1ba)](m[_0x110137(0x1b5)],buttonMessage,{'quoted':fkontak});
-    
+    //function _0x2daf(){const _0x4c1076=['namedoc','social','1017dFLzIP','11680bWFOeX','sendMessage','1FnTozH','6qNtNxK','445374chjKag','2096504ySppGm','627669MaFyqj','readFileSync','ʜᴏᴡ\x20ᴀʀᴇ\x20ʏᴏᴜ\x20ᴛᴏᴅᴀʏ?','374160lMCurS','356228pujvOS','./thumbnail.jpg','1019845zOpQQK','pdf','chat'];_0x2daf=function(){return _0x4c1076;};return _0x2daf();}const _0x110137=_0x13bb;(function(_0x14d3d7,_0x67b65e){const _0x3a56bf={_0x2e964c:0x1b0,_0x4fc539:0x1bd,_0x2a1845:0x1b1,_0x2b6724:0x1b3,_0x4293cc:0x1b8,_0x59080a:0x1b9},_0x30692c=_0x13bb,_0x119b1c=_0x14d3d7();while(!![]){try{const _0x181128=parseInt(_0x30692c(0x1bb))/0x1*(parseInt(_0x30692c(_0x3a56bf._0x2e964c))/0x2)+parseInt(_0x30692c(_0x3a56bf._0x4fc539))/0x3+parseInt(_0x30692c(_0x3a56bf._0x2a1845))/0x4+parseInt(_0x30692c(_0x3a56bf._0x2b6724))/0x5*(parseInt(_0x30692c(0x1bc))/0x6)+-parseInt(_0x30692c(0x1ad))/0x7+-parseInt(_0x30692c(0x1be))/0x8+parseInt(_0x30692c(_0x3a56bf._0x4293cc))/0x9*(-parseInt(_0x30692c(_0x3a56bf._0x59080a))/0xa);if(_0x181128===_0x67b65e)break;else _0x119b1c['push'](_0x119b1c['shift']());}catch(_0x1caf7d){_0x119b1c['push'](_0x119b1c['shift']());}}}(_0x2daf,0x235d2));function _0x13bb(_0x16c7de,_0x1a27b8){const _0x2dafbc=_0x2daf();return _0x13bb=function(_0x13bbaf,_0x156d41){_0x13bbaf=_0x13bbaf-0x1ad;let _0x1a2b8a=_0x2dafbc[_0x13bbaf];return _0x1a2b8a;},_0x13bb(_0x16c7de,_0x1a27b8);}let buttonMessage={'document':{'url':sgh},'mimetype':td,'fileName':global[_0x110137(0x1b6)],'fileLength':fsizedoc,'pageCount':fpagedoc,'contextInfo':{'externalAdReply':{'showAdAttribution':!![],'mediaType':0x1,'previewType':_0x110137(0x1b4),'title':_0x110137(0x1af),'thumbnail':fs[_0x110137(0x1ae)](_0x110137(0x1b2)),'renderLargerThumbnail':!![],'sourceUrl':global[_0x110137(0x1b7)]}},'caption':text['trim']()};await conn[_0x110137(0x1ba)](m[_0x110137(0x1b5)],buttonMessage,{'quoted':fkontak});
+    //m.reply(text.trim())
+    await conn.sendMessage(m.chat, { text: text, contextInfo: { externalAdReply: { title: conn.user.name, body: '', thumbnailUrl: 'https://64.media.tumblr.com/1d40a74cccac72aba9e3d0d9da97a9ff/a7f9d89b63ec7d53-90/s1280x1920/f148893058a449ceb587a444e43611c3b8b4cac5.jpg', sourceUrl: "https://wa.me/"+ global.owner[0][0], mediaType: 1, renderLargerThumbnail: true }}})
      //------------------- 2BUTTON LOCATION
     /*conn.sendButton(m.chat, `${ucapan()}﹗`, text.trim(), `${timeimg()}`, [
       ['🎏 ᴍᴇɴᴜ', `${_p}menu`],
@@ -454,7 +459,7 @@ return conn.relayMessage(m.chat, pre.message, { messageId: pre.key.id })*/
     ], m, {asLocation: true}))*/
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
-    throw e
+   // throw e
   }
 }
 handler.help = ['menu','allmenu', 'help', '?']
@@ -492,6 +497,7 @@ function clockStringP(ms) {
   return [ye, ' *Tahun 🗓,️* ',  mo, ' *Bulan 🌙,* ', d, ' *Hari ☀️,* ', h, ' *Jam 🕐,* ', m, ' *Menit ⏰,* ', s, ' *Detik ⏱️,* '].map(v => v.toString().padStart(2, 0)).join('')
 }
 function ucapan() {
+  
   const time = moment.tz('Asia/Makassar').format('HH')
   let res = "Kok Belum Tidur Kak? 🥱"
   if (time >= 4) {
@@ -507,7 +513,9 @@ function ucapan() {
     res = "Malam Lord 🌙"
   }
   return res
+  
 }
+/*
 function timeimg() {
     let imgloc = ''
   const time = moment.tz('Asia/Jakarta').format('HH')
@@ -535,6 +543,7 @@ function timeimg() {
   }
   return imgloc
 }
+  */
 function hitunganMundur(minute, hour, day, month, year, customTimezone) {
   // Mengatur zona waktu sesuai inputan
   const customDate = new Date(year, month - 1, day, hour, minute);
