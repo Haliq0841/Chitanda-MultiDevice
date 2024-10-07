@@ -2,8 +2,9 @@ import axios from "axios";
 import ffmpeg from "fluent-ffmpeg";
 import fs from "fs/promises";
 import { fileTypeFromStream } from 'file-type';
-import { tiktokdl } from "@bochilteam/scraper";
+//import { tiktokdl } from "@bochilteam/scraper";
 //import cheerio from 'cheerio';
+const tiktokdl = () => {}
 import tobytt from "@tobyg74/tiktok-api-dl";
 const TiktokDownloader = tobytt.Downloader;
 
