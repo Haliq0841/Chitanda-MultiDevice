@@ -37,8 +37,8 @@ try {
   let response;
   do {
     try {
+      if (response) await new Promise(resolve => setTimeout(resolve, 10000));
       response = (await axios.get(url, { headers })).data;
-        await new Promise(resolve => setTimeout(resolve, 10000));
         headers['if-none-match'] = response.headers.etag;
                } catch (error) {
       console.error('Error fetching job status:', error);

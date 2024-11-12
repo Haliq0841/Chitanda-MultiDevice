@@ -86,7 +86,7 @@ contoh ${usedPrefix + command} 4 `,
 				try {
 				m.reply("Proses Kak...");
 					//const This = await processing(img, "enhance");
-                    const res = await (await fetch(`https://widipe.com/remini?url=${ args[1] ? args[1] : await uploader(img)}&resolusi=${args[0]}`)).json()
+                    const res = await (await fetch(`https://aemt.uk.to/remini?url=${ args[1] ? args[1] : await uploader(img)}&resolusi=${args[0]}`)).json()
 					let berhasil = await conn.sendFile(m.chat,res.url , "", "Sudah Jadi Kak >//<", m);
                     if (!berhasil || !res.url) throw "Gagal"
                     if (berhasil) handler.limit = parseInt(args[0])

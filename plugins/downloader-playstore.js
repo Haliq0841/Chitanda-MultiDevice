@@ -10,7 +10,7 @@ var handler = async (m, { conn, args, text, usedPrefix, command }) => {
   // ...
 };
     const tok = "oauth2_4/0AVG7fiQBZzjLZCktNgCnvnE1cRsvQgS4oEjKt-4ZsWr9l1EEgyowF6V5DOTXAnGYrq92TQ";
-    const savetok = join(__dirname, "temp/token.txt");
+    const savetok = join(__dirname, "src/token.txt");
     if (!text) return conn.reply(m.chat, `Silahkan masukan nama aplikasi atau link google play store!`, m);
     let playid = text;
     if (text.match(/(https:\/\/play.google.com\/)/gi)) {
@@ -79,7 +79,7 @@ ${descriptionHtml ? await coverthtml(descriptionHtml, optionshtml) : ""}
     }
 }
 
-handler.help = ['spotify', 'spotifydl', 'spotifysearch', 'splay', 'spotifyalbum', ];
+handler.help = ['playstore' ];
 handler.tags = ["downloader"];
 handler.command = /^(playstore)$/i;
 export default handler;

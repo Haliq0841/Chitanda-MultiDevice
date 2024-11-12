@@ -1,4 +1,16 @@
-import { search, downloadTrack, downloadAlbum } from "@nechlophomeriaa/spotifydl";
+import { 
+  getOriginalUrl,
+  search,
+  downloads,
+  downloads2,
+  downloads3,
+  downloadAlbum,
+  downloadAlbum2,
+  downloadAlbum3,
+  downloadTrack,
+  downloadTrack2,
+  downloadTrack3
+} from "@nechlophomeriaa/spotifydl"
 import fetch from 'node-fetch'
 
 var handler = async (m, { conn, args, text, usedPrefix, command }) => {
@@ -26,7 +38,24 @@ var handler = async (m, { conn, args, text, usedPrefix, command }) => {
         key: m.key,
       },
     });
-            const downTrack = await downloadTrack(text);
+            let downTrack
+            try {
+              downTrack = await downloadTrack(text)
+              if (!downTrack.status) throw 'Fitur sedang tidak aktif atau dalam perbaikan'
+            } catch (e) {
+              try {
+                downTrack = await downloadTrack2(text)
+                if (!downTrack.status) throw 'Fitur sedang tidak aktif atau dalam perbaikan'
+              } catch (e) {
+                try {
+                  downTrack = await downloadTrack3(text)
+                  if (!downTrack.status) throw 'Fitur sedang tidak aktif atau dalam perbaikan'
+                } catch (e) {
+                  throw 'Terjadi kesalahan saat mencari'
+                }
+              }
+            }
+            
             if (!downTrack) throw 'Terjadi kesalahan saat mencari'
             if (!downTrack.status) throw 'Fitur sedang tidak aktif atau dalam perbaikan'
             const { title, artists, duration, popularity, url, album, imageUrl, audioBuffer } = downTrack;

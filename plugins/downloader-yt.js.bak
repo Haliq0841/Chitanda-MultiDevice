@@ -33,7 +33,7 @@ const agentOptions = {
   maxRedirections: 0
   //localAddress: "127.0.0.1",
 };
-let agent = await ytdl.createAgent(cookies, agentOptions);
+const agent = await ytdl.createAgent(cookies, agentOptions);
 const execPromise = promisify(exec);
 
 var handler = async (m, { conn, args, command, text, usedPrefix }) => {
@@ -45,8 +45,7 @@ var handler = async (m, { conn, args, command, text, usedPrefix }) => {
     if (!urls) command = 'play';
    }
 try {
-  cookies = JSON.parse((await global.conn.getFile('cookie.json')).data);
-  agent = await ytdl.createAgent(cookies, agentOptions);
+    
   switch (command) {
     case "play":
     case "ytplay":
@@ -112,44 +111,7 @@ try {
         },
       });
       try {
-        //await downloadAudio(url, tempAudioFile, audioFile);
-        const info = await ytdl.getInfo(url, { agent });
-        await new Promise((resolve, reject) => {
-          ytdl(url, { filter: 'audioonly', agent }).pipe(fs.createWriteStream(tempAudioFile)).on('finish', resolve).on('error', reject);
-          })
-        await new Promise((resolve, reject) => {
-          ffmpeg(tempAudioFile)
-              .audioBitrate(384)
-              .toFormat('mp3')
-              .save(audioFile)
-              .on('end', resolve)
-              .on('progress', (progress) => {
-                console.log('Processing: ' + progress.percent + '% done');
-              })
-              .on('error', reject);
-            })
-        const imageBuffer = await fetch(info.videoDetails.thumbnails[0].url).then((res) => res.buffer())
-        //await fsp.writeFile("cover-yt.jpg", imageBuffer)
-        const tags = {
-          title: info.videoDetails.title,
-          year: info.videoDetails.uploadDate.split('-')[0],
-          description: info.videoDetails.description,
-          genre: info.videoDetails.genre,
-          performer: info.videoDetails.author.name,
-          artist: info.videoDetails.author.name,
-          album: 'Chitanda MD',
-          //APIC: __dirname() + "/cover-yt.jpg",
-          image: {
-            description: "Cover Image",
-            imageBuffer: imageBuffer
-          }
-        };
-        try {
-          await NodeID3.write(tags, audioFile);
-          console.log('ID3 tags added successfully.');
-        } catch (err) {
-          console.error('Error writing ID3 tags:', err);
-        }
+        await downloadAudio(url, tempAudioFile, audioFile);
         let doc = {
           audio: {
             url: audioFile,
@@ -190,7 +152,7 @@ try {
       const audioFile = path.join(tmpDir, 'audio.mp3');
       fs.createWriteStream(tempAudioFile);
       fs.createWriteStream(audioFile);
-      //await downloadAudio(url, tempAudioFile, audioFile);
+      await downloadAudio(url, tempAudioFile, audioFile);
       let doc = {
         document: {
           url: audioFile,
@@ -453,7 +415,7 @@ async function downloadVideo(url, format, outputFile) {
   });
 }
 
-
+// Fungsi untuk mengunduh audio
 async function downloadAudio(url, tempFile, outputFile, type = 'mp3') {
   console.log('Mengunduh audio...');
   await new Promise((resolve, reject) => {
@@ -464,9 +426,9 @@ async function downloadAudio(url, tempFile, outputFile, type = 'mp3') {
   })
     if (type === "webm") {
       await new Promise((resolve, reject) => {
-        ffmpeg(tempFile)  
-          .audioCodec('libopus')  
-          .output(outputFile) 
+        ffmpeg(tempFile)  // File input dalam format webm
+          .audioCodec('libopus')  // Menggunakan codec Opus
+          .output(outputFile)  // Output dalam format Opus
           .on('end', () => {
             console.log('Konversi ke Opus selesai');
             resolve();
@@ -510,6 +472,7 @@ async function downloadAudio(url, tempFile, outputFile, type = 'mp3') {
           })
           .on('error', reject);
         })
+      // Menambahkan tag ID3
       const info = await ytdl.getInfo(url, { agent });
       const imageBuffer = await fetch(info.videoDetails.thumbnails[0].url).then((res) => res.buffer())
       await fsp.writeFile("cover-yt.jpg", imageBuffer)
@@ -517,7 +480,7 @@ async function downloadAudio(url, tempFile, outputFile, type = 'mp3') {
           title: info.videoDetails.title,
           artist: info.videoDetails.author.name,
           album: 'Chitanda MD',
-          //APIC: __dirname() + "/cover-yt.jpg",
+          APIC: __dirname() + "/cover-yt.jpg",
           image: {
             description: "Cover Image",
             imageBuffer: imageBuffer

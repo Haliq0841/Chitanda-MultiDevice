@@ -25,6 +25,7 @@ const koin = 1000
 
 let handler = async (m, { isPrems , isOwner, text, isAdmin}) => {
     let limit = pickRandom(global.randomlimit);
+     //limit = 0
     //if (text === 'Chitanda MD') limit = 100
     //if (text === 'ꓷW ɐpuɐʇıɥↃ') limit = 1000
     let time = global.db.data.users[m.sender].udahklaim + 86400000
@@ -32,6 +33,7 @@ let handler = async (m, { isPrems , isOwner, text, isAdmin}) => {
         if (global.db.data.users[m.sender].koin = null) global.db.data.users[m.sender].koin = 1
         global.db.data.users[m.sender].koin += koin
         global.db.data.users[m.sender].limit += limit
+        global.db.data.users[m.sender].udahklaim = new Date * 1
         return conn.reply(m.chat, `Selamat Kamu Mendapatkan:\n\n+${limit} Limit\n+${koin} Koin`, m)
         let msg = generateWAMessageFromContent(m.chat, {
   viewOnceMessage: {
