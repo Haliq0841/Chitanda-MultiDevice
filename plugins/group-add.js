@@ -1,7 +1,7 @@
 const {
 	getBinaryNodeChild,
 	getBinaryNodeChildren
-} = (await import('@adiwajshing/baileys')).default
+} = (await import('@whiskeysockets/baileys')).default
 
 import fetch from 'node-fetch'
 

@@ -1,6 +1,6 @@
 import { uploadToPomf2 } from '../lib/uploadImage.js';
 import { sticker } from '../lib/sticker.js';
-import MessageType from '@adiwajshing/baileys';
+import MessageType from '@whiskeysockets/baileys';
 
 const effects = ['jail', 'gay', 'glass', 'wasted', 'triggered', 'lolice', 'simpcard', 'horny', 'comrade', 'passed', 'lgbt', 'lesbian', 'its-so-stupid'];
 

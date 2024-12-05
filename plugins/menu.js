@@ -8,7 +8,7 @@ import moment from 'moment-timezone'
 import os from 'os'
 import fs from 'fs'
 //const moment = () => {}
-const { generateWAMessageFromContent, proto } = (await import('@adiwajshing/baileys')).default
+const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 const defaultMenu = {
   before: `

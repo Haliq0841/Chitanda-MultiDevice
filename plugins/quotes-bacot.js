@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-const { WA_DEFAULT_EPHEMERAL } = (await import('@adiwajshing/baileys')).default;
+const { WA_DEFAULT_EPHEMERAL } = (await import('@whiskeysockets/baileys')).default;
 
 let handler = async (m) => {
     let who;

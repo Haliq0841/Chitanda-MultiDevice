@@ -11,7 +11,7 @@
     },
     "scripts": {
         "start": "node index.js",
-        "test": "node test.js", 
+        "test": "node test.js",
         "test2": "nodemon index.js"
     },
     "keywords": [
@@ -39,7 +39,6 @@
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@adiwajshing/baileys": "npm:@whiskeysockets/baileys",
         "@bochilteam/scraper": "^5.0.1",
         "@distube/ytdl-core": "^4.14.4",
         "@Haliq0841/google-play-api": "github:Haliq0841/node-google-play-store",
@@ -47,6 +46,7 @@
         "@ibaraki-douji/pixivts": "^2.4.1",
         "@nechlophomeriaa/spotifydl": "^1.0.31",
         "@tobyg74/tiktok-api-dl": "^1.1.9",
+        "@whiskeysockets/baileys": "^6.7.9",
         "acrcloud": "^1.4.0",
         "awesome-phonenumber": "^5.10.0",
         "axios": "^1.4.0",
@@ -88,7 +88,7 @@
         "ocr-space-api-wrapper": "^2.3.0",
         "pdfkit": "^0.13.0",
         "perf_hooks": "^0.0.1",
-        "pino": "^8.15.0",
+        "pino": "^8.21.0",
         "qrcode": "^1.5.3",
         "readline": "^1.3.0",
         "remove.bg": "^1.3.0",

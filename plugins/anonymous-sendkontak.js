@@ -1,4 +1,4 @@
-const { MessageType, Presence } = (await import('@adiwajshing/baileys')).default
+const { MessageType, Presence } = (await import('@whiskeysockets/baileys')).default
 
 async function handler(m, { command, conn, text }) {
 	this.anonymous = this.anonymous ? this.anonymous : {}

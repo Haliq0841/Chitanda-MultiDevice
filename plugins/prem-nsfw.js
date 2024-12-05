@@ -11,7 +11,7 @@ function pickRandom(list) {
      }
 
 //------- MODULE  
-let { MessageType } = (await import('@adiwajshing/baileys')).default
+let { MessageType } = (await import('@whiskeysockets/baileys')).default
 import fetch from 'node-fetch'
 
 //---------------------------------

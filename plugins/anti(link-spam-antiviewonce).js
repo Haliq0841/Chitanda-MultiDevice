@@ -1,4 +1,4 @@
-let { downloadContentFromMessage } = (await import('@adiwajshing/baileys'));
+let { downloadContentFromMessage } = (await import('@whiskeysockets/baileys'));
 import { format } from 'util';
 
 export async function all(m) {

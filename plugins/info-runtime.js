@@ -1,5 +1,5 @@
 //Thanks Papah-Chan https://github.com/FahriAdison
-let { generateWAMessageFromContent } = (await import("@adiwajshing/baileys")).default 
+let { generateWAMessageFromContent } = (await import("@whiskeysockets/baileys")).default 
 import { performance } from 'perf_hooks'
 import fs from 'fs'
 let handler  = async (m, { conn, usedPrefix: _p }) => {

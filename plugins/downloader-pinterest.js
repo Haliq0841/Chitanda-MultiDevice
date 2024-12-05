@@ -94,7 +94,7 @@ function extractUrlsFromText(text) {
 // import cheerio from 'cheerio'
 // import fetch from 'node-fetch'
 // import { lookup } from 'mime-types'
-// import { URL_REGEX } from '@adiwajshing/baileys'
+// import { URL_REGEX } from '@whiskeysockets/baileys'
 
 // let handler = async (m, { conn, text, usedPrefix, command }) => {
 // 	text = text.endsWith('SMH') ? text.replace('SMH', '') : text 

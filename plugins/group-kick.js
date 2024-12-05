@@ -1,7 +1,7 @@
 // Code by Xnuvers007
 // https://github.com/Xnuvers007/
 
-import { areJidsSameUser } from '@adiwajshing/baileys'
+import { areJidsSameUser } from '@whiskeysockets/baileys'
 
 let handler = async (m, { conn, participants, isAdmin }) => {
     if (!isAdmin) {

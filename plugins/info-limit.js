@@ -1,4 +1,4 @@
-const { proto, generateWAMessageFromContent } = (await import('@adiwajshing/baileys')).default
+const { proto, generateWAMessageFromContent } = (await import('@whiskeysockets/baileys')).default
 
 let handler = async (m, {
     conn,
@@ -38,7 +38,7 @@ ${dmenub} 🪙 *koin:* ${String(ke3)}
 ${dmenuf}
 `
     //conn.reply(m.chat, caption, fakes, adReply)
-//let { proto, generateWAMessageFromContent } = require('@adiwajshing/baileys')
+//let { proto, generateWAMessageFromContent } = require('@whiskeysockets/baileys')
 return await conn.sendMessage(m.chat, { text: caption }, { quoted: m })
 let msg = generateWAMessageFromContent(m.chat, {
   viewOnceMessage: {

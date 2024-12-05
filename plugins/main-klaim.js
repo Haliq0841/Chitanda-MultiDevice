@@ -1,4 +1,4 @@
-const { proto, generateWAMessageFromContent } = (await import('@adiwajshing/baileys')).default
+const { proto, generateWAMessageFromContent } = (await import('@whiskeysockets/baileys')).default
 global.randomlimit = [
  5,
  6,

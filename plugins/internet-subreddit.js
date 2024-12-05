@@ -35,7 +35,7 @@
 // export default handler;
 
 import fetch from 'node-fetch';
-import { generateWAMessageFromContent } from '@adiwajshing/baileys';
+import { generateWAMessageFromContent } from '@whiskeysockets/baileys';
 import fs from 'fs';
 
 const handler = async (m, { conn, args, usedPrefix, command }) => {

@@ -1,6 +1,6 @@
 import { uploadToPomf2 } from '../lib/uploadImage.js'
 import ocrapi from 'ocr-space-api-wrapper'
-const { MessageType } = (await import('@adiwajshing/baileys')).default
+const { MessageType } = (await import('@whiskeysockets/baileys')).default
 
 async function performOCR(url) {
   try {

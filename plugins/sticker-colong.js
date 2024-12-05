@@ -1,4 +1,4 @@
-let { MessageType } = (await import('@adiwajshing/baileys')).default
+let { MessageType } = (await import('@whiskeysockets/baileys')).default
 import { sticker } from '../lib/sticker.js'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {

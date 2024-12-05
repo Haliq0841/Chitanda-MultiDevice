@@ -45,9 +45,8 @@ import {
     DisconnectReason,
     fetchLatestBaileysVersion, 
     makeInMemoryStore, 
-    makeCacheableSignalKeyStore, 
-    PHONENUMBER_MCC
-    } from '@adiwajshing/baileys'
+    makeCacheableSignalKeyStore,
+    } from '@whiskeysockets/baileys'
 import { Low, JSONFile } from 'lowdb'
 import { makeWASocket, protoType, serialize } from './lib/simple.js'
 import cloudDBAdapter from './lib/cloudDBAdapter.js'
@@ -105,7 +104,6 @@ global.loadDatabase = async function loadDatabase() {
 }
 loadDatabase()
 const usePairingCode = !process.argv.includes('--use-pairing-code')
-const useMobile = process.argv.includes('--mobile')
 
 var question = function(text) {
             return new Promise(function(resolve) {
@@ -164,12 +162,11 @@ global.conn = makeWASocket(connectionOptions)
 conn.isInit = false
 
 if(usePairingCode && !conn.authState.creds.registered) {
-		if(useMobile) throw new Error('Cannot use pairing code with mobile api')
 		const { registration } = { registration: {} }
 		let phoneNumber = ''
 		do {
 			phoneNumber = await question(chalk.blueBright('Input a Valid number start with region code. Example : 62xxx:\n'))
-		} while (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v)))
+		} while (!phoneNumber || isNaN(phoneNumber))
 		rl.close()
 		phoneNumber = phoneNumber.replace(/\D/g,'')
 		console.log(chalk.bgWhite(chalk.blue('Generating code...')))
