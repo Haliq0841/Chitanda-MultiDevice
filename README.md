@@ -64,7 +64,7 @@ Install this tool first before running the script
 
 ```bash
 git clone https://github.com/Haaliq0841/Chitanda-MultiDevice
-cd Elaina-MultiDevice
+cd Chitanda-MultiDevice
 npm install
 npm update
 ```
